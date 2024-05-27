@@ -1,0 +1,53 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Latest Populare News</h1>
+    <template id="card-template">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-title"></div>
+          <div class="card-content"></div>
+        </div>
+      </div>
+    </template>
+    <div id="card-list"></div>
+
+    <script>
+      let news = [
+        {
+          id: 1,
+          title: "Election Results",
+          content: "Newly elected minister...",
+        },
+        { id: 2, title: "Sporting Success", content: "World Cup winners..." },
+        {
+          id: 3,
+          title: "Tornado Warning",
+          content: "Residents should prepare...",
+        },
+      ];
+
+      function mostpupularNews(title, content) {
+        const newsDisplayed = document
+          .getElementById("card-template")
+          .content.cloneNode(true);
+        newsDisplayed.querySelector(".card-title").innerText = title;
+        newsDisplayed.querySelector(".card-content").innerText = content;
+        document.getElementById("card-list").appendChild(newsDisplayed);
+      }
+      function populateNews() {
+        const newsContainer = document.getElementById("card-list");
+        newsContainer.innerHTML = "";
+        news.forEach((items) => {
+          mostpupularNews(items.title, items.content);
+        });
+      }
+      populateNews();
+      setInterval(populateNews, 5000);
+    </script>
+  </body>
+</html>

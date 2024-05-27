@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CSS Animation</title>
+    <style>
+      div {
+        animation-name: slidein;
+        animation-duration: 3s;
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+        /* background-color: black; */
+        position: absolute;
+        left: 0;
+        right: 0;
+        border-radius: 10px;
+        margin-left: auto;
+        margin-right: auto;
+
+        animation-name: slidein;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        /* }
+        @keyframes slidein {
+          from {
+            background-color: red;
+            top: 10px;
+          }
+          to {
+            background-color: blue;
+            top: 100px;
+          }
+        } */
+      }
+      @keyframes slidein {
+        0% {
+          background-color: red;
+          margin-top: 0%;
+        }
+
+        100% {
+          background-color: blue;
+          margin-top: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+  </body>
+</html>
