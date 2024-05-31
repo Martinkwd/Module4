@@ -19,6 +19,8 @@
   <body>
     <template id="cards-template">
       <div class="col-lg-3 col-md-6 col-sm-12">
+        <!--If the screen is slightly above large, having this width set can make the cards overlap-->
+        <!--To fix that, you can remove this style attribute-->
         <div class="card" style="width: 18rem">
           <img class="card-img-top" src="..." alt="Card image cap" />
           <div class="card-body">
@@ -42,3 +44,11 @@
     <script src="lab10.js"></script>
   </body>
 </html>
+
+<!--This file is missing the dropdown selection to choose individual product categories-->
+<!--The way you can do that is when you receive the fake store data, you can find the-->
+<!--unique categories. Then once you have an array of the unique categories, you can create-->
+<!--a new <option> element for each of the categories with JS. You'd then put those <option> elements-->
+<!--into a <select> element on the page with JS. Then when a user selects a category, you'd filter-->
+<!--the array of products you got from the API and get all of the products that come from the selected-->
+<!--category and then display them on the screen.-->
